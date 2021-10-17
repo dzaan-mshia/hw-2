@@ -37,7 +37,9 @@ class Fraction(private var numerator : Int, private var denumerator: Int){
         if (any !is Fraction) {
             return false
         }
-        return (this.denumerator / this.numerator ) == (any.denumerator / any.numerator)
+        val a = this.shekveca()
+        val b = any.shekveca()
+        return a.numerator == b.numerator && a.denumerator == b.denumerator
     }
 
 }
